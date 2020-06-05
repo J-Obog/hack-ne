@@ -23,9 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'q0w$@7t-j)9mm1q!c=&rchmt1lq^xskv#0z!60!ho#7lon(lhr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['far-friends-hne.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
