@@ -1,0 +1,25 @@
+{
+  "name": "hack-ne",
+  "version": "1.0.0",
+  "description": "Hack NorEast Backend",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-Obog/hack-ne.git"
+  },
+  "author": "Obogbaimhe y Berke\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b\u001b[C\u001b[C\u001b[Cauthor: Obogbaimhe, Berke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/J-Obog/hack-ne/issues"
+  },
+  "homepage": "https://github.com/J-Obog/hack-ne#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
