@@ -1,13 +1,15 @@
-const Sequelize = require("sequelize");
-const connectionURI = process.env.PGRES_DB;
+require('dotenv').config();
 
-const db = new Sequelize(connectionURI, {
-	pool: {
-        max: 5,
-        min: 0,
-        acquire: 30000,
-        idle: 10000,
-    },
-});
+const Sequelize = require("sequelize");
+const connectionURI = process.env.CONNECTION_URI
+
+const opts = {
+    define: {
+    	timestamps: false,
+        freezeTableName: true
+    }
+}
+
+const db = new Sequelize(connectionURI, opts)
 
 module.exports = db;

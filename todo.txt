@@ -1,0 +1,13 @@
+login 
+	[ ] Passport Facebook 
+	[ ] Passport Twitter 
+	[ ] Passport Gmail
+
+signup 
+	[ ] Validate no Repeats 
+	[ ] Validate email 
+	[ ] Find some way to store pics 
+
+search filtering
+	[ ] Filter results 
+	[ ]
