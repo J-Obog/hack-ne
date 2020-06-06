@@ -23,15 +23,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'q0w$@7t-j)9mm1q!c=&rchmt1lq^xskv#0z!60!ho#7lon(lhr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['far-friends-hne.herokuapp.com', '127.0.0.1']
+DEBUG = True
+ALLOWED_HOSTS = ['far-friends-hne.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'rest_framework',
     'profiles',
+    'chat',
     'rest_framework.authtoken',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -58,7 +60,7 @@ ROOT_URLCONF = 'far_friends.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,7 +74,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'far_friends.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -139,3 +140,4 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images/')
 MEDIA_URL = '/images/'
 
+ASGI_APPLICATION = 'routing.application'
