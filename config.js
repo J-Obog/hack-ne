@@ -1,13 +1,34 @@
 const Sequelize = require("sequelize");
 const connectionURI = process.env.DATABASE_URL
 
-const opts = {
-    define: {
-    	timestamps: false,
-        freezeTableName: true
-    }
+/*
+options: {
+		define: {
+			timestamps: false,
+			freezeTableName: true
+    	}
+    }/*,
+	dialect: 'postgres',
+	dialectOptions: {
+		ssl: false
+	}
+*/
+const options = {
+	define: {
+		timestamps: false,
+		freezeTableName: true,
+		dialect: 'postgres',
+		ssl: true
+	}
 }
 
-const db = new Sequelize(connectionURI, opts)
+const db = new Sequelize(connectionURI, options);
+
+/*db.options = {
+	define: {
+		timestamps: false,
+		freezeTableName: true
+	}
+}*/
 
 module.exports = db;

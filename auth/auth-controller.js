@@ -47,14 +47,15 @@ module.exports.signUp = async (req, res) => {
 		const hash =  await bcrypt.hash(req.body.password, 10);
 		const data = {
 			username: req.body.username,
-			password: req.body.password,
+			password: hash,
 			first_name: req.body.first_name,
 			last_name: req.body.last_name,
 			dob: req.body.dob
 		}
 		await User.create(data);
 		res.status(200).json({'message': 'User created'});
-	} catch {
+	} catch(err) {
+		console.log(err); 
 		res.status(500).json({'message': 'Registration failed'})
 	}
 }
