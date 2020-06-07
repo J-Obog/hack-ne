@@ -1,4 +1,4 @@
-require('dotenv').config();
+//require('dotenv').config();
 const Sequelize = require('sequelize');
 const connectionURI = process.env.DATABASE_URL;
 
@@ -10,7 +10,7 @@ const opts = {
   dialectOptions: {
     ssl: {
       require: true,
-      rejectUnauthorized: false, // <<<<<<< YOU NEED THIS
+      rejectUnauthorized: false,
     },
   },
 };
