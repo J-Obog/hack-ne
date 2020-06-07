@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const Sequelize = require("sequelize");
-const connectionURI = process.env.CONNECTION_URI
+const connectionURI = process.env.DATABSE_URL
 
 const opts = {
     define: {
