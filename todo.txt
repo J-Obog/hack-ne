@@ -11,3 +11,18 @@ signup
 search filtering
 	[ ] Filter results 
 	[ ]
+
+
+server 
+	auth 
+		controllers
+			logIn
+			signUp 
+			logOut 
+
+		routes
+			login
+			signup
+			logout
+
+		

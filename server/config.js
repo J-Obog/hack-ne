@@ -5,7 +5,7 @@ const connectionURI = process.env.DATABASE_URL;
 const opts = {
   dialect: 'postgres',
   define: {
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
   },
   dialectOptions: {
