@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Hack NorEast Backend",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon serer.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,5 @@
     "sequelize": "^5.21.12",
     "socket.io": "^2.3.0"
   },
-  "devDependencies": {
-    "dotenv": "^8.2.0"
-  }
+  "devDependencies": {}
 }
