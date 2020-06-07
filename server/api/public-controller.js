@@ -10,16 +10,22 @@ module.exports.getUsers = async (req, res) => {
 };
 
 module.exports.getAppState = async (req, res) => {
-	try {
-		const topRecent = await User.findAll({limit: 3, order: [ ['updatedAt', 'DESC'] ]});
-		const topJoined = await User.findAll({limit: 3, order: [ ['createdAt', 'ASC'] ]});
-		const totalOn = await User.count({ where: { online: true }});
-		return res.status(200).json({
-			noOnline: totalOn,
-			mostRecent: topRecent,
-			newMemebers: topJoined
-		})
+  try {
+    const topRecent = await User.findAll({
+      limit: 6,
+      order: [['updatedAt', 'DESC']],
+    });
+    const topJoined = await User.findAll({
+      limit: 6,
+      order: [['createdAt', 'ASC']],
+    });
+    const totalOn = await User.count({ where: { online: true } });
+    return res.status(200).json({
+      noOnline: totalOn,
+      mostRecent: topRecent,
+      newMemebers: topJoined,
+    });
   } catch {
-  	return res.status(500).json({ message: 500 })
-  } 
-}
+    return res.status(500).json({ message: 500 });
+  }
+};
