@@ -41,6 +41,15 @@ app.post ("/logout", async(req, res) => {
 
 
 })*/
+module.exports.getUsers = async (req, res) => {
+	try {
+		const result = await User.findAll()
+		res.status(200).json({users: result})
+	} catch(err) {
+		console.error(err);
+		res.status(500).json({message: 'Query failed'})
+	}
+} 
 
 module.exports.signUp = async (req, res) => {
 	try {

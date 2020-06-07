@@ -10,6 +10,9 @@ router.post('/signup', (req, res) => {
 router.post('/login', (req, res) => {
 	auth.logIn(req, res);
 })
-    
+
+router.get('/users', (req, res) => {
+	auth.getUsers(req, res)
+})
 
 module.exports = router;

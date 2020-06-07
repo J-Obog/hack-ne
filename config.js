@@ -20,6 +20,12 @@ const options = {
 		dialect: 'postgres',
 		ssl: true
 	}
+	dialectOptions: {
+		ssl: {
+			require: true,
+			rejectUnauthorized: false, // <<<<<<< YOU NEED THIS
+		},
+	},
 }
 
 const db = new Sequelize(connectionURI, options);
